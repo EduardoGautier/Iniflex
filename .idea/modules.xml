@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Projeto-Simples-CRUD-main.iml" filepath="$PROJECT_DIR$/.idea/Projeto-Simples-CRUD-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/simples-crud.controller.main.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/simples-crud.controller.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/impl/simples-crud.impl.main.iml" filepath="$PROJECT_DIR$/.idea/modules/impl/simples-crud.impl.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simples-crud.main.iml" filepath="$PROJECT_DIR$/.idea/modules/simples-crud.main.iml" />
+    </modules>
+  </component>
+</project>
