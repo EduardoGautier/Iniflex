@@ -27,11 +27,11 @@ public class EmployeeController {
                     response = EmployeeDTO.class)
     })
     public ResponseEntity<List<EmployeeDTO>> findAll() {
-        List<EmployeeDTO> list = service.findAll();
+        var list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping(value = "/GroupByFunction")
+    @GetMapping(value = "/groupByFunction")
 
     @ApiOperation(value = "Agrupa funcionários por função",
             notes = "Retorna uma lista de funcionários agrupados por função.")
@@ -43,7 +43,7 @@ public class EmployeeController {
         return service.groupByFunction();
     }
 
-    @GetMapping(value = "/MonthOfBirthDay")
+    @GetMapping(value = "/monthOfBirthDay")
     @ApiOperation(value = "Obtém funcionários com aniversário no mês", notes = "Retorna uma lista de funcionários que têm aniversário no mês atual.")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = Employee.class, responseContainer = "List")
@@ -52,7 +52,7 @@ public class EmployeeController {
         return service.monthOfBirthDay();
     }
 
-    @GetMapping(value = "/AlphabeticalOrder")
+    @GetMapping(value = "/alphabeticalOrder")
     @ApiOperation(value = "Obtém funcionários em ordem alfabética", notes = "Retorna uma lista de funcionários em ordem alfabética.")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = Employee.class, responseContainer = "List")
@@ -61,7 +61,7 @@ public class EmployeeController {
         return service.alphabeticalOrder();
     }
 
-    @GetMapping(value = "/OlderEmployee")
+    @GetMapping(value = "/olderEmployee")
     @ApiOperation(value = "Obtém o funcionário mais velho", notes = "Retorna o funcionário mais velho.")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = String.class)
@@ -70,7 +70,7 @@ public class EmployeeController {
         return service.olderEmployee();
     }
 
-    @GetMapping(value = "/SumSalary")
+    @GetMapping(value = "/sumSalary")
     @ApiOperation(value = "Calcula a soma dos salários",
             notes = "Retorna a soma de todos os salários dos funcionários.")
     @ApiResponses(value = {
@@ -80,7 +80,7 @@ public class EmployeeController {
         return service.sumSalary();
     }
 
-    @GetMapping(value = "/MinSalary")
+    @GetMapping(value = "/minSalary")
     @ApiOperation(value = "Obtém os funcionários com o menor salário",
             notes = "Retorna uma lista de funcionários com o menor salário.")
     @ApiResponses(value = {
