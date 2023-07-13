@@ -104,7 +104,7 @@ public class EmployeeController {
     @ApiOperation(value = "Exclui um funcionário",
             notes = "Exclui um funcionário com base no ID fornecido.")
     @ApiResponses(value = {
-            @ApiResponse(code = 204, message = "Funcionário excluído com sucesso"),
+            @ApiResponse(code = 204, message = "Funcionário excleuído com sucesso"),
             @ApiResponse(code = 404, message = "Funcionário não encontrado", response = EmployeeDTO.class)
     })
     public ResponseEntity<EmployeeDTO> deleteEmployee(@PathVariable Long id) {
