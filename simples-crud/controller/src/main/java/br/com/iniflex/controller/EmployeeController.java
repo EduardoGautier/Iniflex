@@ -26,7 +26,7 @@ public class EmployeeController {
             @ApiResponse(code = 200, message = "Operação bem-sucedida",
                     response = EmployeeDTO.class)
     })
-    public ResponseEntity<List<EmployeeDTO>> findAll() {
+    public ResponseEntity<EmployeeDTO> findAll() {
         var list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
@@ -39,7 +39,7 @@ public class EmployeeController {
             @ApiResponse(code = 200, message = "Operação bem-sucedida",
                     response = Employee.class)
     })
-    public List<Employee> groupByFunction() {
+    public Employee groupByFunction() {
         return service.groupByFunction();
     }
 
@@ -86,7 +86,7 @@ public class EmployeeController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = String.class, responseContainer = "List")
     })
-    public List<String> minSalary() {
+    public String minSalary() {
         return service.minSalary();
     }
 
