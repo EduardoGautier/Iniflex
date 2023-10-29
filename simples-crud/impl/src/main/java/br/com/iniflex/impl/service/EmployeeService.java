@@ -44,7 +44,7 @@ public class EmployeeService {
         return repository.alphabeticalOrder();
     }
 
-    public String olderEmployee() {
+    public void olderEmployee() {
         return repository.olderEmployee();
     }
 
@@ -52,7 +52,7 @@ public class EmployeeService {
         return repository.sumSalary();
     }
 
-    public String minSalary() {
+    public void minSalary() {
         return repository.minSalary();
     }
 
