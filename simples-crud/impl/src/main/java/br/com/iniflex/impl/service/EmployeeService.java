@@ -22,13 +22,13 @@ public class EmployeeService {
     }
 
     @Transactional(readOnly = true)
-    public List<EmployeeDTO> findAll() {
+    public EmployeeDTO findAll() {
         return repository.findAll().stream()
                 .map(EmployeeMapper::mapToDTO)
                 .toList();
     }
 
-    public List<Employee> groupByFunction() {
+    public Employee groupByFunction() {
         return repository.getGroupByFunction();
     }
 
@@ -36,11 +36,11 @@ public class EmployeeService {
         return repository.updateSalary();
     }
 
-    public List<Employee> monthOfBirthDay() {
+    public Employee monthOfBirthDay() {
         return repository.monthOfBirthDay();
     }
 
-    public List<Employee> alphabeticalOrder() {
+    public Employee alphabeticalOrder() {
         return repository.alphabeticalOrder();
     }
 
@@ -52,7 +52,7 @@ public class EmployeeService {
         return repository.sumSalary();
     }
 
-    public List<String> minSalary() {
+    public String minSalary() {
         return repository.minSalary();
     }
 
