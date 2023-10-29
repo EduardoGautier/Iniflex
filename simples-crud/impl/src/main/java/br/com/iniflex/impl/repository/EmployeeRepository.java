@@ -17,7 +17,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
             FROM TB_EMPLOYEE
             GROUP BY FUNCTION, ID_PERSON
             """, nativeQuery = true)
-    List<Employee> getGroupByFunction();
+    Employee getGroupByFunction();
 
     @Transactional
     @Modifying
@@ -32,14 +32,14 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
             FROM TB_EMPLOYEE
             WHERE EXTRACT(MONTH FROM (DT_BIRTH)) IN (10, 12)
             """, nativeQuery = true)
-    List<Employee> monthOfBirthDay();
+    Employee monthOfBirthDay();
 
     @Query(value = """
             SELECT *
             FROM TB_EMPLOYEE
             ORDER BY NAME_PERSON
             """, nativeQuery = true)
-    List<Employee> alphabeticalOrder();
+    Employee alphabeticalOrder();
 
     @Query(value = """
             SELECT NAME_PERSON, EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM DT_BIRTH) AS AGE
@@ -58,5 +58,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
             SELECT NAME_PERSON, TRUNC(SALARY / 1212, 2)
             FROM TB_EMPLOYEE
             """, nativeQuery = true)
-    List<String> minSalary();
+    String minSalary();
 }
