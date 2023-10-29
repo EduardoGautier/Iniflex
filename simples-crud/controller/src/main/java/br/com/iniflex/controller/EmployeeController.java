@@ -48,7 +48,7 @@ public class EmployeeController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = Employee.class, responseContainer = "List")
     })
-    public List<Employee> monthOfBirthDay() {
+    public Employee monthOfBirthDay() {
         return service.monthOfBirthDay();
     }
 
@@ -66,7 +66,7 @@ public class EmployeeController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = String.class)
     })
-    public String olderEmployee() {
+    public void olderEmployee() {
         return service.olderEmployee();
     }
 
@@ -86,7 +86,7 @@ public class EmployeeController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = String.class, responseContainer = "List")
     })
-    public String minSalary() {
+    public void minSalary() {
         return service.minSalary();
     }
 
