@@ -57,7 +57,7 @@ public class EmployeeController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Operação bem-sucedida", response = Employee.class, responseContainer = "List")
     })
-    public List<Employee> alphabeticalOrder() {
+    public Employee alphabeticalOrder() {
         return service.alphabeticalOrder();
     }
 
